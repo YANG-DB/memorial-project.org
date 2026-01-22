@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heritage Project - Preserving Stories Through Technology</title>
-  <meta name="description" content="A digital memorial project using AI to preserve and share the stories of those lost to history.">
+  <title>Heritage Project</title>
+  <meta name="description" content="Preserving, reconstructing, and transmitting Jewish life, culture, and memory through advanced technology.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,8 +40,18 @@
     .font-serif { font-family: 'Playfair Display', Georgia, serif; }
     .italic { font-style: italic; }
 
+    /* Animations */
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
     .text-gradient {
-      background: linear-gradient(to right, #e2e8f0, #94a3b8);
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -96,6 +106,7 @@
       height: 3rem;
       border-radius: 0.375rem;
       object-fit: cover;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     nav .logo span {
@@ -159,7 +170,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+      background: linear-gradient(to bottom, rgba(59, 130, 246, 0.2) 0%, transparent 50%);
     }
 
     .hero-content {
@@ -203,13 +214,14 @@
     }
 
     .btn-primary {
-      background: var(--accent-blue);
-      color: white;
+      background: white;
+      color: black;
       border: none;
+      font-weight: 700;
     }
 
     .btn-primary:hover {
-      background: #2563eb;
+      background: #e0e7ff;
       transform: translateY(-2px);
       box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
     }
@@ -251,17 +263,19 @@
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
     .section-title p {
       color: var(--text-secondary);
+      font-size: 1.125rem;
       max-width: 600px;
       margin: 0 auto;
     }
 
     /* Vision Section */
     .vision {
-      background: var(--bg-secondary);
+      background: #0c0c0c;
     }
 
     .vision-quote {
@@ -287,6 +301,12 @@
       padding: 2rem;
       border-radius: 1.5rem;
       text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .vision-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.5);
     }
 
     .vision-card .icon {
@@ -382,6 +402,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .person-card:hover img {
+      filter: grayscale(0%);
     }
 
     .person-card .overlay {
@@ -411,132 +437,6 @@
       font-size: 0.75rem;
       color: var(--text-secondary);
     }
-
-    /* Timeline Section */
-    .timeline-section {
-      background: var(--bg-secondary);
-    }
-
-    .timeline-container {
-      position: relative;
-      padding-top: 1rem;
-    }
-
-    .timeline-line {
-      position: absolute;
-      top: 2.5rem;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(to right, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.2));
-    }
-
-    .timeline-events {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding: 0 3.5rem 1rem;
-      scrollbar-width: none;
-    }
-
-    .timeline-events::-webkit-scrollbar { display: none; }
-
-    .timeline-event {
-      flex-shrink: 0;
-      width: 12rem;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .timeline-event:hover { transform: scale(1.02); }
-
-    .timeline-event .marker {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      border: 2px solid;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 0.75rem;
-      background: var(--bg-primary);
-      position: relative;
-      z-index: 1;
-    }
-
-    .timeline-event .marker svg {
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-    .timeline-event.personal .marker { border-color: var(--accent-blue); color: var(--accent-blue); }
-    .timeline-event.family .marker { border-color: #8b5cf6; color: #8b5cf6; }
-    .timeline-event.work .marker { border-color: #22c55e; color: #22c55e; }
-    .timeline-event.education .marker { border-color: #eab308; color: #eab308; }
-    .timeline-event.historical .marker { border-color: #ef4444; color: #ef4444; }
-    .timeline-event.community .marker { border-color: #6366f1; color: #6366f1; }
-
-    .timeline-event .card {
-      padding: 0.75rem;
-      border-radius: 0.75rem;
-      text-align: center;
-    }
-
-    .timeline-event .year {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--accent-blue);
-      margin-bottom: 0.25rem;
-    }
-
-    .timeline-event .title {
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .timeline-event .type-badge {
-      font-size: 0.625rem;
-      padding: 0.125rem 0.5rem;
-      border-radius: 9999px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      display: inline-block;
-    }
-
-    .timeline-event.personal .type-badge { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
-    .timeline-event.family .type-badge { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
-    .timeline-event.work .type-badge { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
-    .timeline-event.education .type-badge { background: rgba(234, 179, 8, 0.2); color: #facc15; }
-    .timeline-event.historical .type-badge { background: rgba(239, 68, 68, 0.2); color: #f87171; }
-    .timeline-event.community .type-badge { background: rgba(99, 102, 241, 0.2); color: #818cf8; }
-
-    .timeline-nav {
-      position: absolute;
-      top: 5rem;
-      transform: translateY(-50%);
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.6;
-      transition: all 0.3s;
-      z-index: 10;
-    }
-
-    .timeline-nav:hover { opacity: 1; background: rgba(0, 0, 0, 0.7); }
-    .timeline-nav.left { left: 0; }
-    .timeline-nav.right { right: 0; }
 
     /* Institutions Grid */
     .institutions-section {
@@ -646,20 +546,24 @@
 
     /* CTA Section */
     .cta-section {
-      background: linear-gradient(to bottom, var(--bg-primary), #0c0c0c);
+      background: rgba(59, 130, 246, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       text-align: center;
-      padding: 8rem 1.5rem;
+      padding: 6rem 1.5rem;
     }
 
     .cta-section h2 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
     }
 
     .cta-section p {
       color: var(--text-secondary);
-      margin-bottom: 2rem;
-      max-width: 500px;
+      font-size: 1.25rem;
+      margin-bottom: 3rem;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -681,38 +585,13 @@
     footer .footer-content {
       max-width: 1280px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      footer .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+      text-align: center;
     }
 
     footer .copyright {
       color: var(--text-secondary);
       font-size: 0.875rem;
     }
-
-    footer .footer-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    footer .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.875rem;
-      transition: color 0.3s;
-    }
-
-    footer .footer-links a:hover { color: var(--text-primary); }
 
     /* Modal */
     .modal-overlay {
@@ -735,8 +614,8 @@
       border-radius: 1.5rem;
       padding: 2rem;
       max-width: 600px;
-      width: 100%;
-      max-height: 90vh;
+      width: 90%;
+      max-height: 80vh;
       overflow-y: auto;
       position: relative;
     }
@@ -919,7 +798,7 @@
     }
 
     /* Ensure content is above background */
-    nav, section, footer, .modal-overlay {
+    nav, section, footer {
       position: relative;
       z-index: 10;
     }
@@ -935,10 +814,6 @@
 
     .people-section {
       background: rgba(10, 10, 10, 0.7) !important;
-    }
-
-    .timeline-section {
-      background: rgba(17, 17, 17, 0.75) !important;
     }
 
     .institutions-section {
@@ -972,17 +847,16 @@
   <nav>
     <div class="nav-content">
       <a href="#" class="logo">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect fill='%233b82f6' width='48' height='48' rx='6'/%3E%3Cpath fill='white' d='M14 14h20v4H14zm0 8h20v4H14zm0 8h14v4H14z'/%3E%3C/svg%3E" alt="Heritage Project Logo">
+        <img src="logo.jpeg" alt="Heritage Project Logo">
         <span>HERITAGE <span class="accent">PROJECT</span></span>
       </a>
       <ul class="nav-links">
         <li><a href="#about">Vision</a></li>
+        <li><a href="mission.html">Mission</a></li>
         <li><a href="#people">Voices</a></li>
-        <li><a href="#timeline">Timeline</a></li>
         <li><a href="#institutions">Archives</a></li>
         <li><a href="#countries">Global Reach</a></li>
       </ul>
-      <button class="support-btn">Support Us</button>
     </div>
   </nav>
 
@@ -993,7 +867,7 @@
       <p>Using artificial intelligence to honor the memories of those lost to history, giving voice to the voiceless and ensuring their stories live on.</p>
       <div class="hero-buttons">
         <a href="#people" class="btn btn-primary">Explore Voices</a>
-        <a href="#about" class="btn btn-secondary">Learn More</a>
+        <a href="mission.html" class="btn btn-secondary">Learn More</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -1070,32 +944,6 @@
     </div>
   </section>
 
-  <!-- Timeline Section -->
-  <section class="timeline-section" id="timeline">
-    <div class="container">
-      <div class="section-title">
-        <h2 class="font-serif italic">Life Timeline: Rywka Hershkowitz</h2>
-        <p>Click on any event to see details</p>
-      </div>
-      <div class="timeline-container">
-        <button class="timeline-nav left" onclick="scrollTimeline('left')" aria-label="Scroll left">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M15 19l-7-7 7-7"/>
-          </svg>
-        </button>
-        <button class="timeline-nav right" onclick="scrollTimeline('right')" aria-label="Scroll right">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 5l7 7-7 7"/>
-          </svg>
-        </button>
-        <div class="timeline-line"></div>
-        <div class="timeline-events" id="timelineEvents">
-          <!-- Timeline events will be rendered by JavaScript -->
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Institutions Section -->
   <section class="institutions-section" id="institutions">
     <div class="container">
@@ -1127,8 +975,7 @@
     <h2 class="font-serif italic">Join Our Mission</h2>
     <p>Help us preserve history and honor the memories of those who came before us.</p>
     <div class="cta-buttons">
-      <a href="#" class="btn btn-primary">Get Involved</a>
-      <a href="#" class="btn btn-secondary">Make a Donation</a>
+      <a href="https://forms.gle/EXpgbvyymsVnkZM1A" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Involved</a>
     </div>
   </section>
 
@@ -1136,11 +983,6 @@
   <footer>
     <div class="footer-content">
       <p class="copyright">&copy; 2024 Heritage Project. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="#">Ethics Statement</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Use</a></li>
-      </ul>
     </div>
   </footer>
 
@@ -1186,19 +1028,6 @@
       { id: 'G', name: 'Lea Goldstein', role: 'Homemaker', location: 'Kraków, Poland', year: 1920, image: 'resources/images/G.png' }
     ];
 
-    const timeline = [
-      { year: 1872, date: 'May 8, 1872', title: 'Birth', description: 'Born in Kraśnik, near Lublin, in the Russian Empire to a family of small grocers.', type: 'personal', icon: 'star' },
-      { year: 1891, date: 'June 1891', title: 'Marriage', description: 'Married Mordechai Hershkowitz at age 19 in Kraśnik. Moved to Lublin to join his family\'s tailoring trade.', type: 'personal', icon: 'heart' },
-      { year: 1892, date: 'April 1892', title: 'Birth of Avrom', description: 'First child, Avrom, is born. Beginning of motherhood and family life in Lublin.', type: 'family', icon: 'users' },
-      { year: 1896, date: 'March 1896', title: 'Birth of Jakub', description: 'Second son Jakub (Yankel) born. Family workshop is growing and thriving.', type: 'family', icon: 'users' },
-      { year: 1900, date: 'December 1900', title: 'Birth of Chana', description: 'Daughter Chana born. First girl after two boys brings joy to the household.', type: 'family', icon: 'users' },
-      { year: 1904, date: 'August 1904', title: 'Birth of Perl', description: 'Youngest child Perl born. Family is now complete with four children.', type: 'family', icon: 'users' },
-      { year: 1913, date: 'April 1913', title: 'Avrom\'s Emigration', description: 'Eldest son Avrom emigrates to America (New York). Heartbreaking farewell, ongoing worry about his well-being.', type: 'family', icon: 'globe' },
-      { year: 1914, date: 'August 1914', title: 'WWI Begins', description: 'World War I breaks out. Family endures food shortages, Cossack raids, and uncertainty under shifting occupations.', type: 'historical', icon: 'alert', wikipediaArticle: 'World_War_I' },
-      { year: 1918, date: 'November 1918', title: 'Polish Independence', description: 'Polish independence declared. Hope for stability in the new republic but concerned about economic pressures.', type: 'historical', icon: 'flag', wikipediaArticle: 'History_of_Poland_(1918–1939)' },
-      { year: 1920, date: 'Spring 1920', title: 'Chana\'s Engagement', description: 'Daughter Chana engaged to young typesetter for Yiddish newspaper. Actively planning the wedding.', type: 'family', icon: 'heart' }
-    ];
-
     const institutions = [
       { id: 'yad-vashem', name: 'Yad Vashem', location: 'Jerusalem, Israel', description: 'The World Holocaust Remembrance Center, featuring massive archival collections and research data.', url: 'https://www.yadvashem.org/' },
       { id: 'ushmm', name: 'United States Holocaust Memorial Museum', location: 'Washington D.C., USA', description: 'A living memorial that inspires people to confront hatred, prevent genocide, and promote human dignity.', url: 'https://www.ushmm.org/' },
@@ -1212,15 +1041,6 @@
       { name: 'France', count: 25, summary: 'Vast records of the occupation and the resilience of French Jewish communities.', flag: 'https://flagcdn.com/w160/fr.png' },
       { name: 'Israel', count: 15, summary: 'The spiritual and physical home of survivors and global research collections.', flag: 'https://flagcdn.com/w160/il.png' }
     ];
-
-    const icons = {
-      star: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>',
-      heart: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>',
-      users: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>',
-      globe: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
-      alert: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>',
-      flag: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>'
-    };
 
     // Render functions
     function renderBackgroundImages() {
@@ -1263,7 +1083,7 @@
     function renderPeople() {
       const carousel = document.getElementById('peopleCarousel');
       carousel.innerHTML = people.map(person => `
-        <div class="person-card" onclick="showPersonDetail('${person.id}')">
+        <div class="person-card" onclick="showPersonDetail(event, '${person.id}')">
           <div class="image-wrapper">
             <img src="${person.image}" alt="${person.name}">
             <div class="overlay"></div>
@@ -1272,22 +1092,6 @@
               <div class="role">${person.role}</div>
               <div class="location">${person.location}, ${person.year}</div>
             </div>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function renderTimeline() {
-      const container = document.getElementById('timelineEvents');
-      container.innerHTML = timeline.map(event => `
-        <div class="timeline-event ${event.type}" onclick="showEventDetail(${JSON.stringify(event).replace(/"/g, '&quot;')})">
-          <div class="marker">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">${icons[event.icon] || icons.star}</svg>
-          </div>
-          <div class="card glass">
-            <div class="year">${event.year}</div>
-            <div class="title">${event.title}</div>
-            <span class="type-badge">${event.type}</span>
           </div>
         </div>
       `).join('');
@@ -1322,36 +1126,7 @@
     }
 
     // Modal functions
-    function showEventDetail(event) {
-      const modal = document.getElementById('eventModal');
-      const content = document.getElementById('modalContent');
-
-      let wikiSection = '';
-      if (event.wikipediaArticle) {
-        wikiSection = `
-          <a href="https://en.wikipedia.org/wiki/${event.wikipediaArticle}" target="_blank" rel="noopener noreferrer" class="wiki-link">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.09 13.119c-.936 1.932-2.217 4.548-2.853 5.728-.616 1.074-1.127.931-1.532.029-1.406-3.321-4.293-9.144-5.651-12.409-.251-.601-.441-.987-.619-1.139-.181-.15-.554-.24-1.122-.271C.103 5.033 0 4.982 0 4.898v-.455l.052-.045c.924-.005 5.401 0 5.401 0l.051.045v.434c0 .119-.075.176-.225.176l-.564.031c-.485.029-.727.164-.727.436 0 .135.053.33.166.601 1.082 2.646 4.818 10.521 4.818 10.521l.136.046 2.411-4.81-.482-1.067-1.658-3.264s-.318-.654-.428-.872c-.728-1.443-.712-1.518-1.447-1.617-.207-.023-.313-.05-.313-.149v-.468l.06-.045h4.292l.113.037v.451c0 .105-.076.15-.227.15l-.308.047c-.792.061-.661.381-.136 1.422l1.582 3.252 1.758-3.504c.293-.64.233-.801.111-.947-.07-.084-.305-.178-.705-.178l-.523-.047c-.143 0-.215-.038-.215-.121v-.468l.06-.045h3.817l.069.045-.009.44c-.001.105-.062.162-.181.171l-.312.031c-.346.039-.595.218-.838.684l-2.648 5.108.386.761 2.88 5.851.134.046 4.49-10.72c.143-.397.214-.673.214-.801 0-.3-.249-.436-.741-.482l-.48-.031c-.152 0-.227-.068-.227-.166v-.451l.069-.045h4.036l.06.045-.001.434c0 .11-.08.166-.24.166l-.282.031c-.591.053-.875.309-1.166.993l-5.377 12.75c-.074.18-.226.27-.453.27h-.166c-.233 0-.4-.091-.512-.27l-3.312-6.591z"/>
-            </svg>
-            Read more on Wikipedia
-          </a>
-        `;
-      }
-
-      content.innerHTML = `
-        <div class="modal-text">
-          <span class="type-badge" style="background: ${getTypeColor(event.type)}20; color: ${getTypeColor(event.type)}; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.75rem;">${event.type}</span>
-          <h3 class="font-serif italic">${event.title}</h3>
-          <div class="date">${event.date}</div>
-          <p>${event.description}</p>
-          ${wikiSection}
-        </div>
-      `;
-
-      modal.classList.add('active');
-    }
-
-    function showPersonDetail(id) {
+    function showPersonDetail(e, id) {
       const person = people.find(p => p.id === id);
       if (!person) return;
 
@@ -1374,32 +1149,10 @@
       document.getElementById('eventModal').classList.remove('active');
     }
 
-    function getTypeColor(type) {
-      const colors = {
-        personal: '#3b82f6',
-        family: '#8b5cf6',
-        work: '#22c55e',
-        education: '#eab308',
-        historical: '#ef4444',
-        community: '#6366f1'
-      };
-      return colors[type] || colors.personal;
-    }
-
     // People carousel scroll
     function scrollPeople(direction) {
       const container = document.getElementById('peopleCarousel');
       const scrollAmount = 300;
-      container.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-
-    // Timeline scroll
-    function scrollTimeline(direction) {
-      const container = document.getElementById('timelineEvents');
-      const scrollAmount = 400;
       container.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -1421,7 +1174,6 @@
       renderBackgroundImages();
       initParallaxScroll();
       renderPeople();
-      renderTimeline();
       renderInstitutions();
       renderCountries();
     });

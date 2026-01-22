@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Mission - Heritage Project</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Typography */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+
+  <!-- Header with Logo -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5 px-8 py-4">
+    <div class="flex items-center gap-3">
+      <img src="logo.jpeg" alt="Heritage Project Logo" class="w-12 h-12 rounded-md object-cover" />
+      <span class="font-bold tracking-tighter text-xl">HERITAGE <span class="text-blue-500">PROJECT</span></span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 px-6">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-900/20 via-transparent to-transparent"></div>
+    <div class="relative max-w-5xl mx-auto text-center">
+      <span class="inline-block text-blue-400 font-semibold tracking-widest text-sm uppercase mb-4 animate-fade-in">
+        Our Purpose
+      </span>
+      <h1 class="text-5xl md:text-7xl font-bold mb-8 text-gradient animate-fade-in">
+        Mission Statement
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 leading-relaxed animate-fade-in max-w-3xl mx-auto">
+        Preserving, reconstructing, and transmitting Jewish life, culture, and memory through advanced technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- Concise Mission -->
+  <section class="py-20 px-6 bg-[#0c0c0c]">
+    <div class="max-w-4xl mx-auto">
+      <div class="glass rounded-3xl p-10 md:p-14 border border-white/10">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-1 h-12 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+          <h2 class="text-2xl md:text-3xl font-bold text-white">Our Mission</h2>
+        </div>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+          Our mission is to preserve, reconstruct, and visualize Jewish life, culture, and memory—especially
+          in Europe before and during World War II.
+          Using advanced AI, knowledge reconstruction, and digital storytelling, we aim to revive lost Jewish histories
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+          We seek to move beyond remembrance of loss alone, restoring the richness of everyday Jewish life
+          so future generations can learn, connect, and engage with Jewish history in a living, meaningful way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expanded Declaration -->
+  <section class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+          Mission <span class="text-gradient">Declaration</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Opening Statement -->
+      <div class="mb-16">
+        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+          Our mission is to safeguard & revitalize the memory of Jewish life in Europe prior to and
+          during World War II by combining historical scholarship with advanced artificial intelligence,
+          AI driven knowledge systems, and interactive digital experiences.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          We believe Jewish remembrance must extend beyond dates, events, and tragedy. It must also
+          preserve the cultural, social, intellectual, and everyday dimensions of Jewish life—families,
+          traditions, education, creativity, faith, and community.
+          Much of this lived experience was fragmented or erased by the Holocaust; our work aims to responsibly reconstruct and reconnect
+          these lost contexts for future generations.
+        </p>
+      </div>
+
+      <!-- Core Objectives -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+          <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Through AI-driven knowledge reconstruction, we strive to:
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Preserve -->
+          <div class="group glass p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 group-hover:bg-blue-500/30 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white mb-2">Preserve</h4>
+                <p class="text-gray-400">Preserve personal and collective Jewish histories across generations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reconstruct -->
+          <div class="group glass p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 group-hover:bg-blue-500/30 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white mb-2">Reconstruct</h4>
+                <p class="text-gray-400">Reconstruct cultural and social connections disrupted by persecution and destruction</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enrich -->
+          <div class="group glass p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 group-hover:bg-blue-500/30 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white mb-2">Enrich</h4>
+                <p class="text-gray-400">Enrich historical records with context, relationships, and lived meaning</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Create -->
+          <div class="group glass p-6 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 group-hover:bg-blue-500/30 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-white mb-2">Create</h4>
+                <p class="text-gray-400">Create accessible, interactive tools for education, research, and remembrance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commitment Statement -->
+      <div class="glass rounded-3xl p-10 md:p-14 border border-white/10 bg-gradient-to-br from-blue-900/10 to-purple-900/10">
+        <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          Our Commitment
+        </h3>
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          Rooted in respect for survivors, their descendants, and historical truth, our project is
+          committed to collaboration with educators, cultural institutions, memorial organizations,
+          and scholars.
+        </p>
+        <p class="text-xl text-white font-medium leading-relaxed">
+          Our goal is not only to remember what was lost, but to ensure that Jewish life, its depth,
+          diversity, and humanity is understood, honored, and carried forward.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-20 px-6 bg-[#0c0c0c]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Guiding Principles</h2>
+        <p class="text-gray-400">The values that drive our work</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Ethical Technology -->
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center text-blue-400 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Ethical Technology</h3>
+          <p class="text-gray-400">Using AI responsibly and transparently, always in service of historical truth and human dignity.</p>
+        </div>
+
+        <!-- Collaborative Spirit -->
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center text-blue-400 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Collaborative Spirit</h3>
+          <p class="text-gray-400">Working alongside historians, educators, families, and institutions to build a shared heritage.</p>
+        </div>
+
+        <!-- Living Memory -->
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center text-blue-400 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Living Memory</h3>
+          <p class="text-gray-400">Moving beyond loss to celebrate the vibrancy, creativity, and humanity of Jewish life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-24 px-6 text-center bg-blue-900/10 border-y border-white/5">
+    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-gradient">Join Our Mission</h2>
+    <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+      Be part of this effort to preserve and transmit Jewish heritage for future generations.
+    </p>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <a
+        class="px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-100 transition-all"
+        href="https://forms.gle/EXpgbvyymsVnkZM1A"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GET INVOLVED
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-8 border-t border-white/5 text-gray-600 text-sm text-center">
+    <p>&copy; 2024 Memorial Project of Our Community Heritage. Powered by Advanced AI & EHRI Data.</p>
+  </footer>
+
+</body>
+</html>
