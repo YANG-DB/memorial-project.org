@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="logo.jpeg" alt="Heritage Project Logo" width="200" />
+  <img src="logo.jpeg" alt="Memorial Project Logo" width="200" />
 
-  # Heritage Project
+  # Memorial Project
 
   **Preserving, reconstructing, and transmitting Jewish life, culture, and memory through advanced technology**
 
@@ -15,7 +15,7 @@
 
 ## 📖 Mission
 
-The **Heritage Project** is dedicated to safeguarding and revitalizing the memory of Jewish life in Europe prior to and during World War II by combining historical scholarship with advanced artificial intelligence, AI-driven knowledge systems, and interactive digital experiences.
+The **Memorial Project** is dedicated to safeguarding and revitalizing the memory of Jewish life in Europe prior to and during World War II by combining historical scholarship with advanced artificial intelligence, AI-driven knowledge systems, and interactive digital experiences.
 
 We believe Jewish remembrance must extend beyond dates, events, and tragedy. It must also preserve the cultural, social, intellectual, and everyday dimensions of Jewish life—families, traditions, education, creativity, faith, and community. Much of this lived experience was fragmented or erased by the Holocaust; our work aims to responsibly reconstruct and reconnect these lost contexts for future generations.
 
@@ -39,7 +39,7 @@ Rooted in respect for survivors, their descendants, and historical truth, our pr
 ## 🌟 Guiding Principles
 
 - **Ethical Technology** - Using AI responsibly and transparently, always in service of historical truth and human dignity
-- **Collaborative Spirit** - Working alongside historians, educators, families, and institutions to build a shared heritage
+- **Collaborative Spirit** - Working alongside historians, educators, families, and institutions to build a shared memorial
 - **Living Memory** - Moving beyond loss to celebrate the vibrancy, creativity, and humanity of Jewish life
 
 
@@ -60,7 +60,7 @@ Collaborating with leading Holocaust remembrance institutions worldwide:
 - **National Library of Israel** (Jerusalem, Israel)
 
 ### Global Reach
-Tracking heritage across multiple countries:
+Tracking memorial across multiple countries:
 - Poland (42 archival institutions)
 - Germany (38 archival institutions)
 - France (25 archival institutions)
@@ -107,7 +107,7 @@ Detailed mission statement page with:
 
 ## 🤝 Get Involved
 
-We invite individuals, institutions, and communities to join our mission of preserving and transmitting Jewish heritage.
+We invite individuals, institutions, and communities to join our mission of preserving and transmitting Jewish memorial.
 
 **[Get Involved](https://forms.gle/EXpgbvyymsVnkZM1A)** - Fill out our form to learn how you can contribute
 
@@ -115,13 +115,13 @@ We invite individuals, institutions, and communities to join our mission of pres
 
 ## 🏛️ Partner Institutions
 
-This project collaborates with leading Holocaust remembrance and Jewish heritage institutions to ensure historical accuracy, ethical responsibility, and broad access to archival materials.
+This project collaborates with leading Holocaust remembrance and Jewish memorial institutions to ensure historical accuracy, ethical responsibility, and broad access to archival materials.
 
 ---
 
 ## 📄 License
 
-This project is part of the Memorial Project of Our Community Heritage initiative. Please respect the sensitive nature of historical content and handle all materials with appropriate dignity.
+This project is part of the Memorial Project of Our Community Memorial initiative. Please respect the sensitive nature of historical content and handle all materials with appropriate dignity.
 
 ---
 
@@ -141,6 +141,6 @@ This project is part of the Memorial Project of Our Community Heritage initiativ
 
   Powered by Advanced AI 
 
-  © 2024 Memorial Project of Our Community Heritage. All rights reserved.
+  © 2024 Memorial Project of Our Community Memorial. All rights reserved.
 
 </div>

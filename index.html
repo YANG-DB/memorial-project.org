@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heritage Project</title>
+  <title>Memorial Project</title>
   <meta name="description" content="Preserving, reconstructing, and transmitting Jewish life, culture, and memory through advanced technology.">
   <link rel="icon" type="image/jpeg" href="logo.jpeg">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQ9SBLKJPR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZQ9SBLKJPR');
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -848,8 +857,8 @@
   <nav>
     <div class="nav-content">
       <a href="#" class="logo">
-        <img src="logo.jpeg" alt="Heritage Project Logo">
-        <span>HERITAGE <span class="accent">PROJECT</span></span>
+        <img src="logo.jpeg" alt="Memorial Project Logo">
+        <span>MEMORIAL <span class="accent">PROJECT</span></span>
       </a>
       <ul class="nav-links">
         <li><a href="#about">Vision</a></li>
@@ -983,7 +992,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <p class="copyright">&copy; 2024 Heritage Project. All rights reserved.</p>
+      <p class="copyright">&copy; 2024 Memorial Project. All rights reserved.</p>
     </div>
   </footer>
 
@@ -1033,7 +1042,7 @@
       { id: 'yad-vashem', name: 'Yad Vashem', location: 'Jerusalem, Israel', description: 'The World Holocaust Remembrance Center, featuring massive archival collections and research data.', url: 'https://www.yadvashem.org/' },
       { id: 'ushmm', name: 'United States Holocaust Memorial Museum', location: 'Washington D.C., USA', description: 'A living memorial that inspires people to confront hatred, prevent genocide, and promote human dignity.', url: 'https://www.ushmm.org/' },
       { id: 'arolsen', name: 'Arolsen Archives', location: 'Bad Arolsen, Germany', description: 'The world\'s most comprehensive archive on the victims and survivors of Nazi persecution.', url: 'https://arolsen-archives.org/' },
-      { id: 'nli', name: 'National Library of Israel', location: 'Jerusalem, Israel', description: 'Home to the world\'s largest collection of textual Jewish heritage.', url: 'https://www.nli.org.il/' }
+      { id: 'nli', name: 'National Library of Israel', location: 'Jerusalem, Israel', description: 'Home to the world\'s largest collection of textual Jewish memorial.', url: 'https://www.nli.org.il/' }
     ];
 
     const countries = [
@@ -1139,7 +1148,7 @@
           <h3 class="font-serif italic">${person.name}</h3>
           <div class="date">${person.role}</div>
           <p>${person.location}, ${person.year}</p>
-          <p style="margin-top: 1rem; color: var(--text-secondary);">This is a preview of the Heritage Project. In the full version, you can hear ${person.name}'s story told in their own AI-generated voice, explore their family connections, and view their complete timeline.</p>
+          <p style="margin-top: 1rem; color: var(--text-secondary);">This is a preview of the Memorial Project. In the full version, you can hear ${person.name}'s story told in their own AI-generated voice, explore their family connections, and view their complete timeline.</p>
         </div>
       `;
 
