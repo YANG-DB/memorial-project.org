@@ -394,7 +394,6 @@
       flex-shrink: 0;
       width: 280px;
       scroll-snap-align: start;
-      cursor: pointer;
       transition: transform 0.3s;
     }
 
@@ -1093,7 +1092,7 @@
     function renderPeople() {
       const carousel = document.getElementById('peopleCarousel');
       carousel.innerHTML = people.map(person => `
-        <div class="person-card" onclick="showPersonDetail(event, '${person.id}')">
+        <div class="person-card">
           <div class="image-wrapper">
             <img src="${person.image}" alt="${person.name}">
             <div class="overlay"></div>
