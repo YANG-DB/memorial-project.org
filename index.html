@@ -1028,12 +1028,11 @@
 
     // Data
     const people = [
-      { id: 'A', name: 'Jakub Hershkowitz', role: 'Tailor', location: 'Lublin, Poland', year: 1920, image: 'resources/images/A.png' },
-      { id: 'B', name: 'Rywka Hershkowitz', role: 'Household Manager', location: 'Lublin, Poland', year: 1920, image: 'resources/images/B.png' },
-      { id: 'C', name: 'Chana Hershkowitz', role: 'Seamstress', location: 'Lublin, Poland', year: 1920, image: 'resources/images/C.png' },
-      { id: 'D', name: 'Joseph Goldstein', role: 'Merchant', location: 'Kraków, Poland', year: 1920, image: 'resources/images/D.png' },
-      { id: 'F', name: 'Saul Goldstein', role: 'Cheder Student', location: 'Kraków, Poland', year: 1920, image: 'resources/images/F.png' },
-      { id: 'G', name: 'Lea Goldstein', role: 'Homemaker', location: 'Kraków, Poland', year: 1920, image: 'resources/images/G.png' }
+      { id: 'A', name: 'Issac Helfgott', image: 'resources/images/A.png' },
+      { id: 'B', name: 'Jenta Helfgott', image: 'resources/images/B.png' },
+      { id: 'C', name: 'Rachel Helfgott Shafrir', image: 'resources/images/C.png' },
+      { id: 'E', name: 'Anita Helfgott Ekstein', image: 'resources/images/E.png' },
+      { id: 'G', name: 'Miriam Helfgott Popper', image: 'resources/images/G.png' }
     ];
 
     const institutions = [
@@ -1091,14 +1090,12 @@
     function renderPeople() {
       const carousel = document.getElementById('peopleCarousel');
       carousel.innerHTML = people.map(person => `
-        <div class="person-card">
+        <div class="person-card" onclick="showPersonDetail('${person.id}')" style="cursor:pointer;">
           <div class="image-wrapper">
             <img src="${person.image}" alt="${person.name}">
             <div class="overlay"></div>
             <div class="info">
               <h3>${person.name}</h3>
-              <div class="role">${person.role}</div>
-              <div class="location">${person.location}, ${person.year}</div>
             </div>
           </div>
         </div>
@@ -1134,19 +1131,21 @@
     }
 
     // Modal functions
-    function showPersonDetail(e, id) {
+    function showPersonDetail(id) {
       const person = people.find(p => p.id === id);
       if (!person) return;
 
       const modal = document.getElementById('eventModal');
       const content = document.getElementById('modalContent');
+      const videoSrc = `resources/images/${person.id}.mp4`;
 
       content.innerHTML = `
-        <div class="modal-text">
-          <h3 class="font-serif italic">${person.name}</h3>
-          <div class="date">${person.role}</div>
-          <p>${person.location}, ${person.year}</p>
-          <p style="margin-top: 1rem; color: var(--text-secondary);">This is a preview of the Memorial Project. In the full version, you can hear ${person.name}'s story told in their own AI-generated voice, explore their family connections, and view their complete timeline.</p>
+        <div style="width:100%;">
+          <h3 class="font-serif italic" style="margin-bottom:1rem;">${person.name}</h3>
+          <video controls autoplay style="width:100%; border-radius:0.75rem; background:#000;">
+            <source src="${videoSrc}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       `;
 
@@ -1154,7 +1153,10 @@
     }
 
     function closeModal() {
-      document.getElementById('eventModal').classList.remove('active');
+      const modal = document.getElementById('eventModal');
+      const video = modal.querySelector('video');
+      if (video) video.pause();
+      modal.classList.remove('active');
     }
 
     // People carousel scroll
